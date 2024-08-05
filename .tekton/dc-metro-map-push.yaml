@@ -7,14 +7,14 @@ metadata:
     build.appstudio.redhat.com/target_branch: '{{target_branch}}'
     pipelinesascode.tekton.dev/max-keep-runs: "3"
     pipelinesascode.tekton.dev/on-cel-expression: event == "push" && target_branch
-      == "base-mhdfcq"
+      == "base-jbpqct"
   creationTimestamp: null
   labels:
     appstudio.openshift.io/application: appstudio
     appstudio.openshift.io/component: dc-metro-map
     pipelines.appstudio.openshift.io/type: build
   name: dc-metro-map-on-push
-  namespace: tenant-dev-goer-tenant
+  namespace: happy-path-ksxp-tenant
 spec:
   params:
   - name: git-url
@@ -22,7 +22,7 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
-    value: quay.io/redhat-appstudio-qe/tenant-dev-goer-tenant/appstudio/dc-metro-map:{{revision}}
+    value: quay.io/redhat-appstudio-qe/happy-path-ksxp-tenant/appstudio/dc-metro-map:{{revision}}
   - name: dockerfile
     value: Dockerfile
   - name: path-context
